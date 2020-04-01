@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(/images/3d-heart-abstract-shape-zc-1366x768.jpg);
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    transition: all .2s linear;
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(206, 206, 206, 0.726);
+    transition: background-color .2s linear;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(128, 128, 128);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* .burger {
+    position: absolute;
+    right: 5%;
+    top: calc(0.5 * 10vh);
+    transform: translate(-5%, calc(0.5 * 10vh));
+    margin-top: calc(-0.75 * 10vh);
+}
+
+.line:nth-child(2) {
+    opacity: 1;
+}
+
+.burger:hover > .line:first-child {
+    transform: translateX(7.5px) rotate(45deg)  translateY(11px);
+}
+.burger:hover > .line:nth-child(2) {
+    opacity: 0;
+}
+.burger:hover > .line:nth-child(3) {
+    transform: translateX(7.5px) rotate(-45deg) translateY(-11px);
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: #fff;
+    transition: all .2s linear;
+} */
+
+.home {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#head {
+    position: absolute;
+    width: fit-content;
+    height: 6vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 6vw;
+    font-weight: 700;
+    color: rgba(61, 61, 61, 0.5);
+    text-shadow: 0px 0px 3px gray;
+    left: 50%;
+    top: 50%;
+    /* margin: 0 auto 0 auto; */
+    transform: translate(-50%, -50%);
+    animation-name: phase;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+@keyframes phase {
+    0% {color: rgba(61, 61, 61, 0.5);}
+    50% {color: rgba(61, 61, 61, 0.788);}
+    100% {color: rgba(61, 61, 61, 0.5);}
+}
+
+nav {
+    position: absolute;
+    height: 10vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+.navlinks {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto 0 auto;
+}
+
+.navlinks > div {
+    position: relative;
+    height: 100%;
+    line-height: 10vh;
+    transition: .2s;
+    box-shadow: inset 0px 3px 0px 0px rgba(255,255,255,1);
+    margin-top: -3px;
+    padding: 0px 8px;
+}
+
+.navlinks > div.hover {
+    margin-top: 0px;
+}
+.navlinks > div.stick {
+    box-shadow: inset 0px 10vh 0px 0px rgba(255,255,255,1);
+    background-color: white;
+    margin-top: 0px;
+}
+
+.navlinks > div.stick > a {
+    color: black;
+}
+
+.navlinks > div > a {
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 0 5px;
+}
+
+.page {
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
+    background-color: aliceblue;
+    overflow-y: auto;
+}
+
+.page a {
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #0c2c58;
+    border-top-left-radius: 20%30px;
+    border-bottom-left-radius: 20%30px;
+    border-top-right-radius: 20%30px;
+    border-bottom-right-radius: 20%30px;
+    transition: all .3s ease;
+}
+
+.page a:hover {
+    background-color: #3195d8;
+}
+
+#about {
+    top: 110vh;
+    transition: 1s;
+}
+
+#about > .embo {
+    position: relative;
+    display: grid;
+    width: 85%;
+    height: 90%;
+    left: calc((100% - 85%) / 2);
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(15, 50px);
+    column-gap: calc(85vw - (2 * 400px));
+}
+
+#about > h1 {
+    font-size: 5vw;
+    text-align: center;
+}
+
+#about > .embo > .card {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    box-shadow: -2px 4px 10px 4px rgb(128, 128, 128) ;
+}
+
+/* #about > .embo > .card:nth-child(2) {
+    top: 50px;
+    left: 100px;
+} */
+
+#about > .embo > .card > h3 {
+    text-align: center;
+    font-size: 2vw;
+    padding-top: 5%;
+    font-weight: 700;
+    color: coral;
+}
+
+#about > .embo > .card > p {
+    text-align: center;
+    padding-top: 5%;
+    font-weight: 500;
+    text-shadow: 0 0 6px 3px lightcoral;
+    padding-left: 0%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#about > .embo > .card > a {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    width: 40%;
+    margin: 5% auto 0 auto;
+}
+
+#about > .embo > .card:nth-child(1) {
+    grid-row: 1/6;
+}
+
+#about > .embo > .card:nth-child(2) {
+    grid-row: 1/6;
+}
+
+#about > .embo > .card:nth-child(3) {
+    grid-row: 8/13;
+}
+
+#join {
+    top: 110vh;
+    transition: 1s;
+}
+
+#project {
+    top: 110vh;
+    transition: 1s;
+}
+
+#pricing {
+    top: 110vh;
+    transition: 1s;
+}
+
